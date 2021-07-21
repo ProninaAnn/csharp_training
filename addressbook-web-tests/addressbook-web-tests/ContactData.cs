@@ -16,9 +16,6 @@ namespace WebAddressbookTests
         private string address = "";
         private string mobile = "";
         private string email = "";
-        private string bday = "";
-        private string bmonth = "";
-        private string byear = "";
         private string address2 = "";
         private string phone2 = "";
         private string notes = "";
