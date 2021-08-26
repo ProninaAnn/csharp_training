@@ -12,9 +12,9 @@ namespace WebAddressbookTests
         [Test]
         public void ContactCreationTest()
         {
-            GoToHomePage();
-            Login(new AccountData ("admin", "secret"));
-            InitContactCreation();
+            navigator.GoToHomePage();
+            loginHelper.Login(new AccountData ("admin", "secret"));
+            contactHelper.InitContactCreation();
             ContactData contact = new ContactData("Аня");
             contact.Firstname = "Аня";
             contact.Middlename = "Pushin";
@@ -27,10 +27,10 @@ namespace WebAddressbookTests
             contact.Address2 = "г.Севастополь";
             contact.Phone2 = "89003000600";
             contact.Notes = "Заметка";
-            FillContactForm(contact);
-            InputContact();
-            ReturnHomePage();
-            Logout();
+            contactHelper.FillContactForm(contact);
+            contactHelper.InputContact();
+            contactHelper.ReturnHomePage();
+            loginHelper.Logout();
         }
     }
 }
